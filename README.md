@@ -45,3 +45,7 @@ OPTIONS:
   --tsv                   Show TSV format results.
   -h, --help              Show help information.
 ```
+
+## Related articles
+
+- [株式会社ゆめみ所属メンバの SSH 鍵強度調査](https://qiita.com/hugehoge/items/e47ef0260cc129f255a6)
