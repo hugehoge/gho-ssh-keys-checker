@@ -14,7 +14,7 @@ struct CommandOptions: ParsableArguments {
 }
 
 @main
-struct Main {
+struct EntryPoint {
   static func main() async {
     do {
       let options = CommandOptions.parseOrExit()
