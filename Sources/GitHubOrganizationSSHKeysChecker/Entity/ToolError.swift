@@ -10,7 +10,7 @@ extension ToolError: LocalizedError {
     switch self {
     case .apiCall:
       return "GitHub API call failed."
-      
+
     case .shellExec:
       return "Shell execution failed."
     }
