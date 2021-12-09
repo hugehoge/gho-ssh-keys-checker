@@ -1,8 +1,8 @@
 import Foundation
 
 enum ToolError: Error {
-case apiCall
-case shellExec
+  case apiCall
+  case shellExec
 }
 
 extension ToolError: LocalizedError {

@@ -8,7 +8,7 @@ let package = Package(
     .macOS(.v12),
   ],
   products: [
-      .executable(name: "gho-ssh-keys-checker", targets: ["GitHubOrganizationSSHKeysChecker"]),
+    .executable(name: "gho-ssh-keys-checker", targets: ["GitHubOrganizationSSHKeysChecker"]),
   ],
   dependencies: [
     .package(url: "https://github.com/apple/swift-argument-parser", .exact("1.0.2")),

@@ -9,12 +9,12 @@ struct GitHubOrganizationSSHKeysChecker {
 
     let userNames = try await client.fetchUserNames(organization: organization)
     let userPemKeys: [UserPemKey] =
-    try await withThrowingTaskGroup(of: (userName: String, keys: [String]).self) { group in
-      for userName in userNames {
-        group.addTask {
-          try await (userName, client.fetchUserKeys(userName: userName))
+      try await withThrowingTaskGroup(of: (userName: String, keys: [String]).self) { group in
+        for userName in userNames {
+          group.addTask {
+            try await (userName, client.fetchUserKeys(userName: userName))
+          }
         }
-      }
 
       return try await group.reduce(into: [UserPemKey]()) { acc, cur in
         acc += cur.keys.map { UserPemKey(userName: cur.userName, pemKeyString: $0) }
